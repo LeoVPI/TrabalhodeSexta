@@ -7,10 +7,12 @@ namespace AluguelCarros.Models
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(255)]
         [Display(Name = "Modelo do Carro")]
         public string? Modelo { get; set; }
 
         [Required]
+        [MaxLength(255)]
         [Display(Name = "Marca")]
         public string? Marca { get; set; }
 

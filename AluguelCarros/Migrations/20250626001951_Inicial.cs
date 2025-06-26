@@ -14,12 +14,12 @@ namespace AluguelCarros.Migrations
                 name: "Carros",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Modelo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Marca = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ano = table.Column<int>(type: "int", nullable: false),
-                    Disponivel = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Modelo = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
+                    Marca = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
+                    Ano = table.Column<int>(type: "INTEGER", nullable: false),
+                    Disponivel = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
